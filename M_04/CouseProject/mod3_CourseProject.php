@@ -29,7 +29,7 @@
 </div>
 <!-- Insert Logo-->
   <div class="col-lg-4 col-sm-6">
-    <img src="logo-placeholder.png">
+    <img src="logo-placeholder.png" class="img-responsive">
   </div>
 
 </div>
@@ -44,8 +44,8 @@
 </div>
 <nav class="btn-toolbar" role="toolbar">
 <a href="index.html" class="col-lg-1 col-sm-1 btn btn-primary" role = "button">Home</a>
-<a href="mod4_AboutUs.HTML" class="col-lg-1 col-sm-1 btn btn-primary" role = "button">About Us</a>
-<a href="mod4_Help.HTML" class="col-lg-1 col-sm-1 btn btn-primary" role = "button">Help</a>
+<a href="mod4_AboutUs.html" class="col-lg-1 col-sm-1 btn btn-primary" role = "button">About Us</a>
+<a href="mod4_Help.html" class="col-lg-1 col-sm-1 btn btn-primary" role = "button">Help</a>
 </nav>
 </div>
 
@@ -56,9 +56,9 @@
 
   <nav class="btn-toolbar" role="toolbar">
     <a href="mod4_Ref1.php" class="col-lg-2 col-sm-1 btn btn-primary" role = "button">Department 1</a>
-    <a href="mod4_Ref2.PHP" class="col-lg-2 col-sm-1 btn btn-primary" role = "button">Department 2</a>
-    <a href="mod4_Ref3.PHP" class="col-lg-2 col-sm-1 btn btn-primary" role = "button">Department 3</a>
-    <a href="mod4_Ref4.PHP" class="col-lg-2 col-sm-1 btn btn-primary" role = "button">Department 4</a>
+    <a href="mod4_Ref2.php" class="col-lg-2 col-sm-1 btn btn-primary" role = "button">Department 2</a>
+    <a href="mod4_Ref3.php" class="col-lg-2 col-sm-1 btn btn-primary" role = "button">Department 3</a>
+    <a href="mod4_Ref4.php" class="col-lg-2 col-sm-1 btn btn-primary" role = "button">Department 4</a>
   </nav>
 </div>
 </div>
@@ -76,7 +76,7 @@
       include 'mod3_config.php';
       include 'mod3_opendb.php';
 
-      $sql= "SELECT ItemName , ItemBrand, ItemCost, ItemExperation FROM mylist";
+      $sql= "SELECT ItemName , ItemBrand, ItemExperation FROM mylist LIMIT 15";
       $result = mysqli_query($conn, $sql);
 
       if (mysqli_num_rows($result) > 0) {
@@ -84,8 +84,8 @@
         while($row = mysqli_fetch_assoc($result)) {
             echo "ItemName: " . $row["ItemName"]. "<br>";
             echo "ItemBrand: " . $row["ItemBrand"]. "<br>";
-            echo "ItemCost:" . $row["ItemCost"]. "<br>";
             echo "ItemExperation: " . $row["ItemExperation"]. "<br><hr>";
+
         }
       } else {
         echo "0 results";
@@ -105,12 +105,12 @@
       <div class="row">
 
         <nav class="Filter-toolbar" role="toolbar">
-          <a href="mod4_Filter1.PHP" class="col-lg-2 col-sm-1 btn btn-primary" role = "button">Filters 1</a>
-          <a href="mod4_Filter2.PHP" class="col-lg-2 col-sm-1 btn btn-primary" role = "button">Filters 2</a>
-          <a href="mod4_Filter3.PHP" class="col-lg-2 col-sm-1 btn btn-primary" role = "button">Filters 3</a>
-          <a href="mod4_Filter4.PHP" class="col-lg-2 col-sm-1 btn btn-primary" role = "button">Filters 4</a>
-          <a href="mod4_Filter5.PHP" class="col-lg-2 col-sm-1 btn btn-primary" role = "button">Filters 5</a>
-          <a href="mod4_Filter6.PHP" class="col-lg-2 col-sm-1 btn btn-primary" role = "button">Filters 6</a>
+          <a href="mod4_Filter1.php" class="col-lg-2 col-sm-1 btn btn-primary" role = "button">Filters 1</a>
+          <a href="mod4_Filter2.php" class="col-lg-2 col-sm-1 btn btn-primary" role = "button">Filters 2</a>
+          <a href="mod4_Filter3.php" class="col-lg-2 col-sm-1 btn btn-primary" role = "button">Filters 3</a>
+          <a href="mod4_Filter4.php" class="col-lg-2 col-sm-1 btn btn-primary" role = "button">Filters 4</a>
+          <a href="mod4_Filter5.php" class="col-lg-2 col-sm-1 btn btn-primary" role = "button">Filters 5</a>
+          <a href="mod4_Filter6.php" class="col-lg-2 col-sm-1 btn btn-primary" role = "button">Filters 6</a>
         </nav>
       </div>
       </div>
@@ -123,13 +123,11 @@
        <div class="row">
          <div class="BlankSpace col-lg-8 col-sm-6"></div>
            <div class="col-lg-4 col-sm-6" >
-           <img src="logo-placeholder.png">
+           <img src="logo-placeholder.png" class="img-responsive">
           </div>
        </div>
      </div>
 
-  </div>
-</div>
 
 
 <!--Footer-->
